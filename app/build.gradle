@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'guitarpracticetool.app.view.Main'
+
+dependencies {
+    compile project(':afterburner')
+}
+
+processResources {
+    from('src/main/java') {
+        include '**/*.fxml'
+        include '**/*.css'
+        include '**/*.properties'
+        include '**/*.png'
+    }
+    from('src/test/java') {
+        include '**/*.fxml'
+        include '**/*.css'
+        include '**/*.properties'
+    }
+    from('src/main/resources') {
+        include '**/*.xml'
+    }
+}

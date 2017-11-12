@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #404575;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guitarpracticetool.metronome.view.MetronomePresenter">
+   <children>
+      <TextField fx:id="bpmLabel" alignment="CENTER" layoutX="14.0" layoutY="14.0" onInputMethodTextChanged="#bpmChanged" opacity="0.9" prefHeight="60.0" prefWidth="110.0" style="-fx-background-color: #808AEA;" text="BPM">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </TextField>
+      <StackPane fx:id="playButton" layoutX="14.0" layoutY="84.0" onMouseReleased="#play" opacity="0.75" prefHeight="80.0" prefWidth="120.0" style="-fx-background-radius: 5; -fx-background-color: #808AEA;">
+         <children>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon_play.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane fx:id="stopButton" layoutX="144.0" layoutY="84.0" onMouseClicked="#stop" opacity="0.75" prefHeight="80.0" prefWidth="120.0" style="-fx-background-radius: 5; -fx-background-color: #808AEA;">
+         <children>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon_stop.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane fx:id="plusBPMButton" layoutX="134.0" layoutY="14.0" onMouseClicked="#plusBPM" opacity="0.75" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 5; -fx-background-color: #808AEA;">
+         <children>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon_plus.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane fx:id="minusBPMButton" layoutX="204.0" layoutY="14.0" onMouseClicked="#minusBPM" opacity="0.75" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 5; -fx-background-color: #808AEA;">
+         <children>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon_minus.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

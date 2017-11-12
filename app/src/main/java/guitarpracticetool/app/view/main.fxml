@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="680.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="guitarpracticetool.app.view.MainPresenter">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="600.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/TP.jpg"/>
+            </image>
+        </ImageView>
+        <StackPane fx:id="mediaPlayer" layoutY="80.0" prefHeight="600.0" prefWidth="600.0" visible="false"/>
+        <AnchorPane fx:id="metronomeViewContainer" layoutY="80.0" prefHeight="600.0" prefWidth="600.0">
+                <fx:include source="../../metronome/view/metronome.fxml" fx:id="metronomeView"/>
+        </AnchorPane>
+        <AnchorPane fx:id="topBar" prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #404575;">
+            <children>
+                <Button fx:id="showMetronomeViewButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false"
+                        onAction="#showMetronomeView" prefHeight="70.0" prefWidth="80.0"
+                        style="-fx-background-color: #404575;" text="Metronome" textAlignment="CENTER" wrapText="true">
+                    <effect>
+                        <InnerShadow/>
+                    </effect>
+                    <font>
+                        <Font size="11.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="exitButton" layoutX="506.0" layoutY="5.0" mnemonicParsing="false" onAction="#exit"
+                        prefHeight="70.0" prefWidth="80.0" style="-fx-background-color: #404575;" text="EXIT"
+                        textAlignment="CENTER">
+                    <effect>
+                        <InnerShadow/>
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="showMediaPlayerViewButton" layoutX="260.0" layoutY="5.0" mnemonicParsing="false"
+                        onAction="#showMediaPlayerView" prefHeight="70.0" prefWidth="80.0"
+                        style="-fx-background-color: #404575;" text="Media Player" textAlignment="CENTER"
+                        wrapText="true">
+                    <effect>
+                        <InnerShadow/>
+                    </effect>
+                    <font>
+                        <Font size="11.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
